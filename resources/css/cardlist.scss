@@ -1,0 +1,22 @@
+.cardlist {
+    margin: 50px auto;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    .bar {
+        margin: 10px;
+        width: 100%;
+        border-radius: 8px;
+        background: rgb(9, 121, 117);
+        background: linear-gradient(
+            90deg,
+            rgba(9, 121, 117, 1) 0%,
+            rgba(15, 90, 98, 1) 0%,
+            rgba(0, 209, 213, 1) 100%
+        );
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+    }
+}

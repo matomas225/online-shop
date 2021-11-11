@@ -1,6 +1,14 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&display=swap");
 * {
+    font-family: "Mohave", sans-serif;
+
     margin: 0;
     padding: 0;
 }
 
 @import "./main.scss";
+@import "./nav.scss";
+@import "./card.scss";
+@import "./cardlist.scss";
+@import "./login.scss";
