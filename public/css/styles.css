@@ -91,7 +91,6 @@ nav ul li a {
   flex-wrap: wrap;
 }
 .cardlist .bar {
-  margin: 10px;
   width: 100%;
   border-radius: 8px;
   background: #097975;
@@ -103,11 +102,45 @@ nav ul li a {
 }
 
 .login {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: grid;
   place-items: center;
 }
 .login form {
+  margin-top: 150px;
+  padding: 30px;
+  color: white;
   background-color: #0f6668;
+  border-radius: 8px;
+}
+.login form h1 {
+  font-size: 52px;
+  text-align: center;
+}
+.login form label {
+  width: 99.1%;
+  font-size: 18px;
+}
+.login form input {
+  margin: 0px 0px 10px 0px;
+  width: 99.1%;
+  padding: 20px 0px 20px 0px;
+}
+.login form a {
+  margin: 10px 0px 10px 0px;
+  display: grid;
+  place-items: center;
+  color: #00d1d5;
+  text-decoration: none;
+}
+.login form button {
+  font-size: 20px;
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: aqua;
 }
