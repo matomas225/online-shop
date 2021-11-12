@@ -1,4 +1,4 @@
-.login {
+.register {
     width: 100%;
     height: 100%;
     display: grid;
@@ -6,20 +6,20 @@
     form {
         margin-top: 150px;
         padding: 30px;
-        color: white;
         max-width: 460px;
+        color: white;
         background-color: rgb(15, 102, 104);
         border-radius: 8px;
         h1 {
             font-size: 52px;
             text-align: center;
         }
-        p {
-            color: rgb(163, 255, 247);
-        }
         label {
             width: 99.1%;
             font-size: 18px;
+        }
+        p {
+            color: rgb(163, 255, 247);
         }
         input {
             font-size: 18px;

@@ -40,6 +40,15 @@ nav {
 
                 transition: 0.3s;
             }
+            form {
+                button {
+                    font-size: 22px;
+                    color: rgb(194, 255, 250);
+                    cursor: pointer;
+                    border: none;
+                    background-color: rgba(255, 255, 255, 0);
+                }
+            }
             a {
                 color: rgb(194, 255, 250);
 

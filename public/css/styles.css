@@ -46,6 +46,13 @@ nav ul li :hover {
   color: #00ffea;
   transition: 0.3s;
 }
+nav ul li form button {
+  font-size: 22px;
+  color: #c2fffa;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
 nav ul li a {
   color: #c2fffa;
   transition: 0.3s;
@@ -111,6 +118,7 @@ nav ul li a {
   margin-top: 150px;
   padding: 30px;
   color: white;
+  max-width: 460px;
   background-color: #0f6668;
   border-radius: 8px;
 }
@@ -118,11 +126,15 @@ nav ul li a {
   font-size: 52px;
   text-align: center;
 }
+.login form p {
+  color: #a3fff7;
+}
 .login form label {
   width: 99.1%;
   font-size: 18px;
 }
 .login form input {
+  font-size: 18px;
   margin: 0px 0px 10px 0px;
   width: 99.1%;
   padding: 20px 0px 20px 0px;
@@ -143,4 +155,85 @@ nav ul li a {
   border: none;
   cursor: pointer;
   background-color: aqua;
+}
+
+.register {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.register form {
+  margin-top: 150px;
+  padding: 30px;
+  max-width: 460px;
+  color: white;
+  background-color: #0f6668;
+  border-radius: 8px;
+}
+.register form h1 {
+  font-size: 52px;
+  text-align: center;
+}
+.register form label {
+  width: 99.1%;
+  font-size: 18px;
+}
+.register form p {
+  color: #a3fff7;
+}
+.register form input {
+  font-size: 18px;
+  margin: 0px 0px 10px 0px;
+  width: 99.1%;
+  padding: 20px 0px 20px 0px;
+}
+.register form a {
+  margin: 10px 0px 10px 0px;
+  display: grid;
+  place-items: center;
+  color: #00d1d5;
+  text-decoration: none;
+}
+.register form button {
+  font-size: 20px;
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: aqua;
+}
+
+.post {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.post form {
+  margin-top: 150px;
+  padding: 30px;
+  max-width: 460px;
+  color: white;
+  background-color: #0f6668;
+  border-radius: 8px;
+}
+.post form h1 {
+  font-size: 52px;
+  text-align: center;
+}
+.post form label {
+  width: 99.1%;
+  font-size: 18px;
+}
+.post form input {
+  font-size: 18px;
+  margin: 0px 0px 10px 0px;
+  width: 99.1%;
+  padding: 20px 0px 20px 0px;
+}
+.post form textarea {
+  resize: none;
 }
