@@ -12,6 +12,9 @@ class Post extends Model
     protected $fillable = [
         'productName',
         'productDiscription',
+        'imgName',
         'img',
+        "created_at",
+        "updated_at"
     ];
 }

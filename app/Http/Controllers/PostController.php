@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class PostController extends Controller
 {
@@ -16,15 +17,24 @@ class PostController extends Controller
         $request->validate([
             "productName" => ["required", "max:255"],
             "productDiscription" => ["required", "max:255"],
-            "img" => ["required", "max:255"]
-        ]);
-        $post = Post::create(["productName" => $request->productName, "productDiscription" => $request->productDiscription, 'img.*' => 'mimes:doc,pdf,docx,zip,jpeg,png,jpg,gif,svg']);
+            'img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
 
-        if ($request->hasFile('img')) {
-            $file = $request->file('img');
-            $filename = $file->getClientOriginalName();
-            $file->storeAs('public/', $filename);
-        }
-        return redirect('home');
+        ]);
+
+
+        $productName = $request->productName;
+        $productDiscription = $request->productDiscription;
+        $imgName = time() . '.' . $request->img->extension();
+        $img = "images/" . $imgName;
+        $request->img->move(public_path('images'), $imgName);
+
+        $save = new Post;
+
+        $save->productName = $productName;
+        $save->productDiscription = $productDiscription;
+        $save->imgName = $imgName;
+        $save->img = $img;
+        $save->save();
+        return Redirect::route('home');
     }
 }
