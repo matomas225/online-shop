@@ -17,7 +17,6 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string("productName");
             $table->string("productDiscription");
-            $table->string("imgName");
             $table->string("img");
             $table->timestamps();
         });

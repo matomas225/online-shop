@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -21,19 +22,12 @@ class PostController extends Controller
 
         ]);
 
-        $productName = $request->productName;
-        $productDiscription = $request->productDiscription;
-        $imgName = time() . '.' . $request->img->extension();
-        $img = "images/" . $imgName;
-        $request->img->move(public_path('images'), $imgName);
-
-        $save = new Post;
-
-        $save->productName = $productName;
-        $save->productDiscription = $productDiscription;
-        $save->imgName = $imgName;
-        $save->img = $img;
-        $save->save();
+        $img = Storage::disk("public")->put("images", $request->img);
+        Post::create([
+            'productName' => $request->productName,
+            'productDiscription' => $request->productDiscription,
+            'img' => $img,
+        ]);
         return Redirect::route('home');
     }
 }
