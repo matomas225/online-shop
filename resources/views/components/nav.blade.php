@@ -12,7 +12,7 @@
             </form>
         </li>
         <li><a href="">{{auth()->user()->name}}</a></li>
-        <li><a href="">My Posts</a></li>
+        <li><a href="{{route('postlist')}}">My Posts</a></li>
         <li><a href="{{route('post')}}">Create Post</a></li>
 
         @endauth

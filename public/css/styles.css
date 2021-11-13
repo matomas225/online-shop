@@ -234,6 +234,21 @@ nav ul li a {
   width: 99.1%;
   padding: 20px 0px 20px 0px;
 }
+.post form .img-input {
+  font-size: 18px;
+  color: black;
+  border-radius: 6px;
+  padding: 0;
+  width: 99.1%;
+  background-color: white;
+}
 .post form textarea {
   resize: none;
+  width: 99.1%;
+}
+.post form button {
+  font-size: 18px;
+  margin: 0px 0px 10px 0px;
+  width: 99.1%;
+  padding: 20px 0px 20px 0px;
 }

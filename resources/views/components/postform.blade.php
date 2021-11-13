@@ -1,12 +1,13 @@
 <div class="post">
-    <form action="">
+    <form action="" method="POST">
+        @csrf
         <h1>Create Post</h1>
-        <label for="product-name">Product Name</label>
-        <input type="text" placeholder="Enter Product Name" name="product-name">
-        <label for="product-discription">Product Discription</label>
-        <textarea placeholder="Enter Product Discription" name="product-discription" rows="5" cols="50"></textarea>
+        <label for="productName">Product Name</label>
+        <input type="text" placeholder="Enter Product Name" name="productName">
+        <label for="productDiscription">Product Discription</label>
+        <textarea placeholder="Enter Product Discription" name="productDiscription" rows="5" cols="50"></textarea>
         <label for="img">Select image:</label>
-        <input type="file" name="img" accept="image/*">
-        <input type="submit">
+        <input class="img-input" type="file" name="img" accept="image/*">
+        <button type="submit">Create Post</button>
     </form>
 </div>

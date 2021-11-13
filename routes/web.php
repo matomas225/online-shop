@@ -4,6 +4,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,7 @@ Route::get('/register', [RegisterController::class, "index"])->name("register")-
 Route::post('/register', [RegisterController::class, "store"])->middleware("guest");
 
 Route::get('/post', [PostController::class, "index"])->name("post");
+
+Route::post('/post', [PostController::class, "post"])->middleware("auth");
+
+Route::get('/postlist', [PostListController::class, "index"])->name("postlist");
