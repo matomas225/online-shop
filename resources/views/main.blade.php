@@ -18,6 +18,7 @@ $counter = 0;
         <img src="{{ $data->img }}" alt="{{ $data->imgName}}">
         <h1>{{$data->productName}}</h1>
         <p>{{$data->productDiscription}}</p>
+        <p>{{$data->created_at}}</p>
         <button href="">Show more</button>
     </div>
     @endforeach

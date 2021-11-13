@@ -30,8 +30,8 @@ Route::get('/register', [RegisterController::class, "index"])->name("register")-
 
 Route::post('/register', [RegisterController::class, "store"])->middleware("guest");
 
-Route::get('/post', [PostController::class, "index"])->name("post");
+Route::get('/post', [PostController::class, "index"])->name("post")->middleware("auth");
 
 Route::post('/post', [PostController::class, "post"])->middleware("auth");
 
-Route::get('/postlist', [PostListController::class, "index"])->name("postlist");
+Route::get('/postlist', [PostListController::class, "index"])->name("postlist")->middleware("auth");

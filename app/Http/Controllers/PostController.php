@@ -21,7 +21,6 @@ class PostController extends Controller
 
         ]);
 
-
         $productName = $request->productName;
         $productDiscription = $request->productDiscription;
         $imgName = time() . '.' . $request->img->extension();
