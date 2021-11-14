@@ -39,6 +39,8 @@ Route::get('/post/{post}', [PostController::class, "editPage"])->name("post.edit
 
 Route::patch('/post/{post}', [PostController::class, "edit"])->middleware("auth");
 
+Route::delete('/post/{post}', [PostController::class, "delete"])->middleware("auth");
+
 Route::get('/postlist', [PostListController::class, "index"])->name("postlist")->middleware("auth");
 
 Route::get('/postinfo/{post}', [PostInfoController::class, "index"])->name("postinfo")->middleware("auth");

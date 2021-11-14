@@ -36,7 +36,15 @@ class PostController extends Controller
     {
         return view("post", ["post" => $post, "editPage" => true]);
     }
-
+    function delete(Post $post)
+    {
+        if (Auth::id() == $post->user_id) {
+            $post->delete();
+            return Redirect::route('postlist');
+        } else {
+            return abort(403);
+        }
+    }
     function edit(Post $post, Request $request)
     {
         $request->validate([
@@ -44,19 +52,23 @@ class PostController extends Controller
             "productDiscription" => ["max:255"],
             'img' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
-        if ($request->img) {
-            Storage::disk("public")->delete("images", $request->img);
+        if (Auth::id() == $post->user_id) {
+            if ($request->img) {
+                Storage::disk("public")->delete("images", $request->img);
 
-            $img = Storage::disk("public")->put("images", $request->img);
-            $post->img = $img;
+                $img = Storage::disk("public")->put("images", $request->img);
+                $post->img = $img;
+            }
+            if ($request->productName) {
+                $post->productName = $request->productName;
+            }
+            if ($request->productDiscription) {
+                $post->productDiscription = $request->productDiscription;
+            }
+            $post->save();
+            return Redirect::route('postlist');
+        } else {
+            return abort(403);
         }
-        if ($request->productName) {
-            $post->productName = $request->productName;
-        }
-        if ($request->productDiscription) {
-            $post->productDiscription = $request->productDiscription;
-        }
-        $post->save();
-        return Redirect::route('postlist');
     }
 }

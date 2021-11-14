@@ -13,7 +13,12 @@
         <p>{{\Carbon\Carbon::parse($post->created_at)->diffForHumans()}}</p>
         <p>Created By: {{$post->User()->name}}</p>
         <a href="{{route('post.edit', $post)}}"><button href="">Edit</button></a>
-        <a href=""><button href="">Delete</button></a>
+        <form action="{{route('post.edit', $post)}}" method="POST">
+            @csrf
+            @method("delete")
+            <button type="submit">Delete</button>
+        </form>
+
     </div>
     @endforeach
 
