@@ -14,9 +14,6 @@
         <button href="">Show more</button>
     </div>
     @endforeach
+</div>
 
-</div>
-<div class="pages">
-    {{$posts->links()}}
-</div>
 @endsection
