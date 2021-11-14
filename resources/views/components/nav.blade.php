@@ -1,4 +1,4 @@
-<nav>
+<nav class="navbar">
     <ul>
         <h1><a href="{{route('home')}}">Online Shop</a></h1>
         @guest

@@ -19,3 +19,29 @@
         }
     }
 }
+.pages {
+    border-radius: 8px;
+    width: 70vw;
+    margin: auto;
+    background: rgb(9, 121, 117);
+    background: linear-gradient(
+        90deg,
+        rgba(9, 121, 117, 1) 0%,
+        rgba(15, 90, 98, 1) 0%,
+        rgba(0, 209, 213, 1) 100%
+    );
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 22px;
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    span {
+        color: rgba(0, 255, 255, 1);
+    }
+    svg {
+        width: 22px;
+        height: 22px;
+    }
+}
