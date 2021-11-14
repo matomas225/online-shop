@@ -35,6 +35,10 @@ Route::get('/post', [PostController::class, "index"])->name("post")->middleware(
 
 Route::post('/post', [PostController::class, "post"])->middleware("auth");
 
+Route::get('/post/{post}', [PostController::class, "editPage"])->name("post.edit")->middleware("auth");
+
+Route::patch('/post/{post}', [PostController::class, "edit"])->middleware("auth");
+
 Route::get('/postlist', [PostListController::class, "index"])->name("postlist")->middleware("auth");
 
 Route::get('/postinfo/{post}', [PostInfoController::class, "index"])->name("postinfo")->middleware("auth");

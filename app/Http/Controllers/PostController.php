@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Auth\Recaller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -30,5 +31,32 @@ class PostController extends Controller
             'img' => $img,
         ]);
         return Redirect::route('home');
+    }
+    function editPage(Post $post)
+    {
+        return view("post", ["post" => $post, "editPage" => true]);
+    }
+
+    function edit(Post $post, Request $request)
+    {
+        $request->validate([
+            "productName" => ["max:255"],
+            "productDiscription" => ["max:255"],
+            'img' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        ]);
+        if ($request->img) {
+            Storage::disk("public")->delete("images", $request->img);
+
+            $img = Storage::disk("public")->put("images", $request->img);
+            $post->img = $img;
+        }
+        if ($request->productName) {
+            $post->productName = $request->productName;
+        }
+        if ($request->productDiscription) {
+            $post->productDiscription = $request->productDiscription;
+        }
+        $post->save();
+        return Redirect::route('postlist');
     }
 }

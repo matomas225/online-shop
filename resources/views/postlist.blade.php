@@ -12,7 +12,7 @@
         <p>{{$post->productDiscription}}</p>
         <p>{{\Carbon\Carbon::parse($post->created_at)->diffForHumans()}}</p>
         <p>Created By: {{$post->User()->name}}</p>
-        <a href=""><button href="">Edit</button></a>
+        <a href="{{route('post.edit', $post)}}"><button href="">Edit</button></a>
         <a href=""><button href="">Delete</button></a>
     </div>
     @endforeach

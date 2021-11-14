@@ -1,5 +1,5 @@
 @extends("layouts.app")
 @section("main")
-<x-postform/>
+<x-postform :post="$post ?? ''" :editPage="$editPage ?? false"/>
 
 @endsection
