@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
@@ -23,7 +24,7 @@ class PostController extends Controller
         ]);
 
         $img = Storage::disk("public")->put("images", $request->img);
-        Post::create([
+        $request->user()->posts()->create([
             'productName' => $request->productName,
             'productDiscription' => $request->productDiscription,
             'img' => $img,

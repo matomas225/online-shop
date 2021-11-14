@@ -1,0 +1,31 @@
+.postinfo {
+    margin: 10px auto;
+    flex: 1 16%;
+    padding: 20px;
+    width: 50vw;
+    color: white;
+    background-color: rgb(15, 102, 104);
+    border-radius: 8px;
+    border: 2px solid rgb(0, 238, 255);
+    img {
+        width: 100%;
+    }
+    h1 {
+        font-size: 22px;
+        padding: 10px 0px 10px 0px;
+    }
+    p {
+        font-size: 18px;
+        padding: 0px 0px 10px 0px;
+    }
+    button {
+        cursor: pointer;
+        width: 100%;
+        font-size: 20px;
+        border: none;
+        padding: 10px;
+        color: rgb(0, 0, 0);
+        border-radius: 8px;
+        background-color: rgb(0, 255, 255);
+    }
+}

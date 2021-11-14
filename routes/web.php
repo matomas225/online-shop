@@ -4,6 +4,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostInfoController;
 use App\Http\Controllers\PostListController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,5 @@ Route::get('/post', [PostController::class, "index"])->name("post")->middleware(
 Route::post('/post', [PostController::class, "post"])->middleware("auth");
 
 Route::get('/postlist', [PostListController::class, "index"])->name("postlist")->middleware("auth");
+
+Route::get('/postinfo/{post}', [PostInfoController::class, "index"])->name("postinfo")->middleware("auth");

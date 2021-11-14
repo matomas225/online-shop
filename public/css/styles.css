@@ -281,3 +281,35 @@ body {
   cursor: pointer;
   background-color: aqua;
 }
+
+.postinfo {
+  margin: 10px auto;
+  flex: 1 16%;
+  padding: 20px;
+  width: 50vw;
+  color: white;
+  background-color: #0f6668;
+  border-radius: 8px;
+  border: 2px solid #00eeff;
+}
+.postinfo img {
+  width: 100%;
+}
+.postinfo h1 {
+  font-size: 22px;
+  padding: 10px 0px 10px 0px;
+}
+.postinfo p {
+  font-size: 18px;
+  padding: 0px 0px 10px 0px;
+}
+.postinfo button {
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  color: black;
+  border-radius: 8px;
+  background-color: aqua;
+}

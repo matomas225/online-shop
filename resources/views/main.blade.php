@@ -11,7 +11,8 @@
         <h1>{{$data->productName}}</h1>
         <p>{{$data->productDiscription}}</p>
         <p>{{\Carbon\Carbon::parse($data->created_at)->diffForHumans()}}</p>
-        <button href="">Show more</button>
+        <p>Created By: {{$data->User()->name}}</p>
+        <a href="{{route('postinfo', $data)}}"><button href="">Show More</button></a>
     </div>
     @endforeach
 

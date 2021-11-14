@@ -13,7 +13,10 @@ class Post extends Model
         'productName',
         'productDiscription',
         'img',
-        "created_at",
-        "updated_at"
     ];
+
+    public function User()
+    {
+        return $this->belongsTo(User::class)->first();
+    }
 }
