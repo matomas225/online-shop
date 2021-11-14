@@ -82,6 +82,7 @@ body {
 }
 .card button {
   cursor: pointer;
+  margin-bottom: 10px;
   width: 100%;
   font-size: 20px;
   border: none;

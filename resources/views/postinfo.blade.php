@@ -6,6 +6,6 @@
     <p>{{$post->productDiscription}}</p>
     <p>{{\Carbon\Carbon::parse($post->created_at)->diffForHumans()}}</p>
     <p>Created By: {{$post->User()->name}}</p>
-    <button onclick="location.href='/'">Go Back</button>
+    <a href="{{route('home')}}"><button>Go Back</button></a>
 </div>
 @endsection
