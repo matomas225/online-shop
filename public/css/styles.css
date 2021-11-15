@@ -326,3 +326,15 @@ body {
   border-radius: 8px;
   background-color: aqua;
 }
+
+.users {
+  margin: 10px;
+  border-radius: 8px;
+  width: 20%;
+  background: #097975;
+  background: linear-gradient(90deg, #097975 0%, #0f5a62 0%, #00d1d5 100%);
+  color: white;
+}
+.users button {
+  cursor: pointer;
+}

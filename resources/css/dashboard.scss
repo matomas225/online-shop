@@ -1,0 +1,16 @@
+.users {
+    margin: 10px;
+    border-radius: 8px;
+    width: 20%;
+    background: rgb(9, 121, 117);
+    background: linear-gradient(
+        90deg,
+        rgba(9, 121, 117, 1) 0%,
+        rgba(15, 90, 98, 1) 0%,
+        rgba(0, 209, 213, 1) 100%
+    );
+    color: white;
+    button {
+        cursor: pointer;
+    }
+}

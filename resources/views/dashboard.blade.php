@@ -22,7 +22,25 @@
         </form>
     </div>
     @endforeach
-
+    <div class="bar">
+        <h1>Users: {{count($users)}}</h1>
+    </div>
+    @foreach($users as $user)
+    <div class="users">
+        <p>Name: {{$user->name}}</p>
+        <p>Role: {{$user->role}}</p>
+        <form action="{{route('user.edit', $user)}}" method="POST">
+            @csrf
+            @method("patch")
+            <button type="submit">Make admin</button>
+        </form>
+        <form action="{{route('user.edit', $user)}}" method="POST">
+            @csrf
+            @method("delete")
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+    @endforeach
 </div>
 <div class="pages">
     {{$posts->links()}}

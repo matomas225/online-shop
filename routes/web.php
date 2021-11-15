@@ -50,3 +50,7 @@ Route::get('/postinfo/{post}', [PostInfoController::class, "index"])->name("post
 Route::post('/comment/{post}', [CommentController::class, "store"])->name("comment")->middleware("auth");
 
 Route::get('/dashboard', [DashboardController::class, "index"])->name("dashboard")->middleware("auth");
+
+Route::patch('/dashboard/{user}', [DashboardController::class, "makeAdmin"])->name("user.edit")->middleware("auth");
+
+Route::delete('/dashboard/{user}', [DashboardController::class, "delete"])->middleware("auth");
