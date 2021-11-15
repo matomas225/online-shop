@@ -37,7 +37,7 @@ class PostController extends Controller
     }
     function delete(Post $post)
     {
-        if (Auth::id() == $post->user_id) {
+        if (Auth::id() == $post->user_id || Auth::user()->role == "admin") {
             $post->delete();
             return Redirect::route('postlist');
         } else {
@@ -51,7 +51,7 @@ class PostController extends Controller
             "productDiscription" => ["max:255"],
             'img' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
-        if (Auth::id() == $post->user_id) {
+        if (Auth::id() == $post->user_id || Auth::user()->role == "admin") {
             if ($request->img) {
                 Storage::disk("public")->delete("images", $request->img);
 

@@ -1,5 +1,5 @@
 <div class="post">
-    <form action="{{$editPage ? route('post.edit') : route('post')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{$editPage ? route('post.edit', $post) : route('post')}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method($editPage ? "patch" : "post" )
         <h1>{{$editPage ? "Edit Post" : "Create Post"}}</h1>

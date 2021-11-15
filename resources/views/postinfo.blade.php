@@ -10,7 +10,7 @@
 
     <form action="{{route('comment', $post)}}" method="POST">
         @csrf
-        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
         <button type="submit">Comment</button>
     </form>
     <h1>Comments:</h1>

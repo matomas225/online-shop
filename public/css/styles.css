@@ -304,7 +304,19 @@ body {
   font-size: 18px;
   padding: 0px 0px 10px 0px;
 }
+.postinfo .comments {
+  width: 99.1%;
+  overflow: hidden;
+}
+.postinfo form {
+  margin-top: 50px;
+}
+.postinfo form textarea {
+  width: 99.5%;
+  resize: none;
+}
 .postinfo button {
+  margin-top: 10px;
   cursor: pointer;
   width: 100%;
   font-size: 20px;

@@ -21,7 +21,7 @@ class RegisterController extends Controller
             "email" => ["required", "max:255", "unique:users"],
             "password" => ["required", "max:255", "confirmed"]
         ]);
-        $user = User::create(["name" => $request->username, "email" => $request->email, "password" => Hash::make($request->password)]);
+        $user = User::create(["role" => "customer", "name" => $request->username, "email" => $request->email, "password" => Hash::make($request->password)]);
         Auth::login($user);
         return Redirect::route("home");
     }

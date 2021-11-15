@@ -5,6 +5,7 @@
         <li><a href="{{route('login')}}">Login/Register</a> </li>
         @endguest
         @auth
+        
         <li>
             <form action="{{route('logout')}}" method="POST">
                 @csrf
@@ -14,6 +15,9 @@
         <li><a href="">{{auth()->user()->name}}</a></li>
         <li><a href="{{route('postlist')}}">My Posts</a></li>
         <li><a href="{{route('post')}}">Create Post</a></li>
+        @if(auth()->user()->role == "admin")
+        <li><a href="{{route('dashboard')}}">Dashboard</a></li>
+        @endif
         @endauth
     </ul>
 </nav>

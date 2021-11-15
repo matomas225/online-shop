@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostInfoController;
 use App\Http\Controllers\PostListController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,3 +48,5 @@ Route::get('/postlist', [PostListController::class, "index"])->name("postlist")-
 Route::get('/postinfo/{post}', [PostInfoController::class, "index"])->name("postinfo")->middleware("auth");
 
 Route::post('/comment/{post}', [CommentController::class, "store"])->name("comment")->middleware("auth");
+
+Route::get('/dashboard', [DashboardController::class, "index"])->name("dashboard")->middleware("auth");

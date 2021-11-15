@@ -18,7 +18,19 @@
         font-size: 18px;
         padding: 0px 0px 10px 0px;
     }
+    .comments {
+        width: 99.1%;
+        overflow: hidden;
+    }
+    form {
+        margin-top: 50px;
+        textarea {
+            width: 99.5%;
+            resize: none;
+        }
+    }
     button {
+        margin-top: 10px;
         cursor: pointer;
         width: 100%;
         font-size: 20px;
